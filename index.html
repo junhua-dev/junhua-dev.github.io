@@ -64,105 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Python" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/07/07/Python/" class="article-date">
-  <time datetime="2020-07-06T16:15:15.674Z" itemprop="datePublished">2020-07-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/07/Python/">Python</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="range-函数"><a href="#range-函数" class="headerlink" title="range()函数"></a>range()函数</h2><p>产生循环计数序列</p>
-<ol>
-<li>range(N) 产生0到N-1的整数序列</li>
-<li>range(M,N) 产生M到N-1的整数序列</li>
-</ol>
-<h2 id="round-函数"><a href="#round-函数" class="headerlink" title="round()函数"></a>round()函数</h2><p>round(x, d) 对x四舍五入，d是小数截取位数</p>
-<p><strong>end=””</strong> print()函数加上它打印后不换行</p>
-<h2 id="字符串处理函数"><a href="#字符串处理函数" class="headerlink" title="字符串处理函数"></a>字符串处理函数</h2><ol>
-<li><p><strong>str.lower()</strong> 或 <strong>str.upper()</strong> </p>
-</li>
-<li><p><strong>str.split(sep=None)</strong> 返回一个列表，由str根据sep被分隔的部分组成</p>
-</li>
-<li><p><strong>str.count(sub)</strong> 返回子串sub再str中出现的次数</p>
-</li>
-<li><p><strong>str.replace(old, new)</strong> 返回字符串str副本，所有old字串被替换为new</p>
-</li>
-<li><p><strong>str.center(width[,fillchar])</strong> 字符串根据宽度width居中，fillchar可选</p>
-</li>
-<li><p><strong>str.strip(chars)</strong> 从str中去掉其左侧和右侧chars中列出的字符</p>
-</li>
-<li><p><strong>str.join(iter)</strong> 在jiter变量中除最后元素外每个元素后增加一个str</p>
-<blockquote>
-<p>“,”.join(“12345”) 结果为“1, 2, 3, 4, 5” #主要用于字符串分隔等</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="C:%5CUsers%5CJunH%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200703143327599.png" alt="image-20200703143327599"></p>
-<h3 id="format方法的格式控制"><a href="#format方法的格式控制" class="headerlink" title="format方法的格式控制"></a>format方法的格式控制</h3><hr>
-<p>{0:=^20}槽中=表填充默认空格，^表居中（&gt;表右对齐，&lt;表左对齐）20表输出字符</p>
-<h2 id="time库"><a href="#time库" class="headerlink" title="time库"></a>time库</h2><p><strong>time()</strong> 获得浮点数</p>
-<p><strong>ctime()</strong> 易读</p>
-<p><strong>gmtime()</strong> 获得计算机内部的时间变量格式</p>
-<p><strong><em>格式化</em></strong> <strong>strftime(tpl, ts)</strong> tpl是格式化模板字符串，用来定义输出效果，ts是计算机内部时间类型的变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;t &#x3D; time.gmtime()</span><br><span class="line">&gt;&gt;&gt;time.strftime(&quot;&quot;%Y-%m-%d %H:%M:%S&quot;, t)</span><br></pre></td></tr></table></figure>
-
-<p><strong>strptime(str, tpl)</strong> 与strftime(tpl, str)</p>
-<p><strong>perf_counter()</strong> 返回一个CPU级别的精确时间计数值，单位为秒，由于计数值起点不确定，连续调用差值才有意义</p>
-<p><strong>sleep(s)</strong> s拟休眠的时间，单位是秒，可以是浮点数</p>
-<h2 id="not-and-or"><a href="#not-and-or" class="headerlink" title="not and or"></a>not and or</h2><h2 id="遍历循环-for-lt-循环变量-gt-in-lt-遍历结构-gt"><a href="#遍历循环-for-lt-循环变量-gt-in-lt-遍历结构-gt" class="headerlink" title="遍历循环 for &lt;循环变量&gt; in &lt;遍历结构&gt;"></a>遍历循环 for &lt;循环变量&gt; in &lt;遍历结构&gt;</h2><p>字符串遍历：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for c in &quot;Python123&quot;:</span><br><span class="line">	print(c, end&#x3D;&quot;&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>列表遍历：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> [<span class="number">123</span>, <span class="string">"PY"</span>, <span class="number">456</span>]</span><br><span class="line">print(item)</span><br></pre></td></tr></table></figure>
-
-<h2 id="random库"><a href="#random库" class="headerlink" title="random库"></a>random库</h2><ol>
-<li>random.seed(s)</li>
-<li>random.random()</li>
-<li>random.randint(a, b) 生成一个[a, b]之间的整数</li>
-<li>random.randrange(m, n[, k]) 生成一个[m, n)之间以k为步长的随机整数</li>
-<li>random.getrandbits(k) 生成一个k比特长的随机整数</li>
-<li>random.uniform(a, b) 生成一个[a, b]之间的随机小数</li>
-<li>random.choice(seq) 从序列seq中随机选择一个元素</li>
-<li>random.shuffle(seq) 将序列seq中元素随机排列，返回打乱后的序列</li>
-</ol>
-<hr>
-<p><strong>将字符串s反转后输出</strong></p>
-<p><code>s[::-1]</code></p>
-<hr>
-<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>-<strong>递归链条</strong> </p>
-<p><strong>-递归基例</strong></p>
-<p>递归实现主要方法–<strong>函数</strong>+<strong>分支结构</strong></p>
-<p>函数定义过程调用的是自身，在执行过程调用的其实是不同的自身代码的复制版本</p>
-<p><img src="C:%5CUsers%5CJunH%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200706184118641.png" alt="image-20200706184118641"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/07/Python/" data-id="ckcaplr5i000160vlehblgjrh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/06/hello-world/" class="article-date">
@@ -202,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/06/hello-world/" data-id="ckcaplr39000060vla1q07l9y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/06/hello-world/" data-id="ckcbkay7h0000bgvlgfyi29ae" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,10 +142,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/07/Python/">Python</a>
-          </li>
         
           <li>
             <a href="/2020/07/06/hello-world/">Hello World</a>
